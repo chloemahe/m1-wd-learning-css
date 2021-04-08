@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "MovementV";
+  src: url("font/MovementV.ttf");
+}
+
+#lettre {
+  display: block;
+  min-height: 300px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+#lettre a {
+  display: block;
+  float: left;
+  width: 33.33%;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0;
+  color: white;
+  background: #F4E6D6;
+  font-family: "MovementV";
+}
+
+a {
+  display: block;
+  font-family: "MovementV";
+  float: left;
+  width: 25%;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 0;
+  color: white;
+  background: black;
+  border-color: #DAC7B1;
+}
+
+div {
+  display: block;
+  font-family: "MovementV";
+  float: left;
+  height: 440px;
+  width: 300px;
+  margin: 16px;
+  border-color: #DAC7B1;
+  border-style: solid;
+  border-radius: 12px;
+  border-width: 1.5px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+a:focus[data-filter] {
+  opacity: 0.8;
+  outline: none;
+}
+
+div[data-filter="voyelle"] {
+  background-color:#F4E6D6;
+  color: white;
+}
+
+div[data-filter="consonne"] {
+  background: #F4E6D6;
+}
+
+a[data-filter="voyelle"]:focus ~ div:not([data-filter="voyelle"]) {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+a[data-filter="consonne"]:focus ~ div:not([data-filter="consonne"]) {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
